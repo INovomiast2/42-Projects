@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   bzero.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 17:26:16 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/09/13 13:55:44 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/09/13 13:16:28 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/09/13 13:40:47 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	unsigned int	i;
+#include "libft.h"
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, 0, n);
 }

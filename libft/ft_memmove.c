@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 17:26:16 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/09/13 13:55:44 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/09/14 18:03:10 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/09/14 18:10:46 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	unsigned int	i;
+#include <stdio.h>
 
-	i = 0;
-	while (str[i] != '\0')
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	char	*dest;
+	char	*srce;
+
+	dest = (char *)dst;
+	srce = (char *)src;
+	if (dest < srce)
 	{
-		i++;
+		while (len--)
+			*dest++ = *srce++;
 	}
-	return (i);
+	else
+	{
+		dest += len;
+		srce += len;
+		while (len--)
+			*--dest = *--srce;
+	}
+	return (dst);
 }

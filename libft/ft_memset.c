@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 17:26:16 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/09/13 13:55:44 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/09/13 11:50:13 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/09/14 19:56:46 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include <stdio.h>
+
+void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned int	i;
+	size_t			i;
+	unsigned char	*str;
 
 	i = 0;
-	while (str[i] != '\0')
+	str = (unsigned char *)b;
+	while (i < len)
 	{
-		i++;
+		str[i++] = (unsigned char)c;
 	}
-	return (i);
+	return (b);
+}
+
+int main(void)
+{
+ 	char str[50] = "Hello world";
+ 	ft_memset(str, 'a', 6);
+ 	printf("%s", str);
+ 	return (0);
 }
