@@ -6,7 +6,7 @@
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:50:13 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/09/14 19:56:46 by ivnovomi         ###   ########.fr       */
+/*   Updated: 2023/09/17 07:15:40 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
+/*
 int main(void)
 {
  	char str[50] = "Hello world";
@@ -33,3 +34,4 @@ int main(void)
  	printf("%s", str);
  	return (0);
 }
+*/

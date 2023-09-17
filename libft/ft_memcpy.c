@@ -6,7 +6,7 @@
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 13:29:35 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/09/14 18:12:49 by ivnovomi         ###   ########.fr       */
+/*   Updated: 2023/09/16 14:40:24 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	*ft_memcpy(void *dst, void *src, size_t n)
 	return (dest);
 }
 
+/*
 int main(void)
 {
 	char src[] = "Hello World!";
@@ -45,3 +46,4 @@ int main(void)
 	printf("After memcpy dest = %s\n", dest);
 	return (0);
 }
+*/
