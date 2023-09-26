@@ -1,0 +1,49 @@
+# 4Twools
+
+4Twools is a set of different tools to make your journey on a piscine super easy,
+all created with the intention of optimizing the experience.
+
+4Twools has the next scripts to optimize your workflow:
+	- getSubject [ Get the subject of a Piscine Project ].
+	- setRepo [ Create's a blazingly fast repo for your project ].
+	- autoCorrect [ Simulate the correction phase of the projects ].
+	- ghRepo [ Create a new repo on your own GitHub Account and upload all the projects of your piscine ].
+	- autoMake [ **DEV** ].
+	- findPeer [ Are you stuck? Wan't to meet someone?, findPeer it's perfect for YOU! ].
+	- gradeMe [ Run gradeMe on the click of a key (ENTER) ].
+	- impIntra [ Want a cooler intra? Are you bored of that plain old white theme? Change this and more... ].
+	- syncNode [ **DEV** ].
+	- intraAuth [ Auth with your intra credentials ].
+	- 42api [ Make petitions to the 42 API ].
+
+## Download and Install
+
+To install the 4Twools you'll need to follow these steps:
+	1. Go to the release's tab.
+	2. Download the latest version of the 4Twools.
+	3. Uncompress the zip file.
+	4. Open a terminal.
+	5. Run the install.sh script.
+	6. Test that everything is [OKAY] with the install.sh --finish-setup
+	7. Run the ftwools [flags] [values...]
+	8. [ OPTIONAL ]: Init session with your Intra Profile by executing the ftwools auth login.
+
+
+## This is not working boiii...
+
+So... You've found a bug, a problem, this ain't working as you spected... NOTIFY ME!, you can do it
+by going to the Issues:
+	Issue Page: [](https://github.com/INovomiast2/4Twools)
+
+Remember to mark the issue with the correct flag type!!!
+
+## Developer Mode
+
+Have some spectacular idea to implement to the complete toolset of 4Twools?
+
+Download the dev scripts and do the next thing's needed to make your incredible module.
+
+How to setup a moduleEnv:
+	1. ftwools-dev --create-dev-env --name "name"
+	2. cd "your-dir"/dev-env
+	3. nvim . | code . | 

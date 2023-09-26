@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <h1 class="text-center text-6xl mt-20">TO DO</h1>
+
+    <div class="text-center mt-10">
+        <input type="text" placeholder="Type here" class="input input-bordered input-accent w-full max-w-xs" id="chore-input" />
+    </div>
+
+    <div class="flex justify-center items-center mt-5">
+        <table class="table w-5">
+            <!-- head -->
+            <thead>
+              <tr>
+                <th>
+                </th>
+                <th>Chore</th>
+                <th>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="todo-body">
+              <!-- row 1 -->
+              <tr id="default-chore">
+                <th>
+                  <label>
+                    <input type="checkbox" class="checkbox" />
+                  </label>
+                </th>
+                <td>
+                  <div class="flex items-center space-x-3">
+                    <div>
+                      <div class="font-bold" id="chore-title">THERE's NOTHING TO DO!</div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <!-- foot -->
+            <tfoot>
+              <tr>
+                <th></th>
+                <th><button class="btn btn-primary justify-center items-center flex" id="clear-btn">Clear TODO List</button></th>
+                <th>
+                </th>
+              </tr>
+            </tfoot>
+            
+          </table>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./todo.js"></script>
+</body>
+</html>

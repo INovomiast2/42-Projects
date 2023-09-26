@@ -1,48 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 14:31:35 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/09/26 14:29:36 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/09/26 18:22:24 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/09/26 18:24:43 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	int	len;
 
-	i = 0;
-	while (*src && i + 1 < dstsize)
+	len = ft_strlen((char *)s);
+	while (len >= 0)
 	{
-		*dst++ = *src++;
-		++i;
+		if (s[len] == (char )c)
+		{
+			return ((char *)&s[len]);
+		}
+		len--;
 	}
-	if (i < dstsize)
-	{
-		*dst = 0;
-	}
-	while (*src++)
-	{
-		++i;
-	}
-	return (i);
+	return (NULL);
 }
-
-/*
-int main()
-{
-	char *src = "Hello";
-	char dst[10];
-	int i;
-
-	i = ft_strlcpy(dst, src, 0);
-	printf("%d\n", i);
-	printf("%s\n", dst);
-	return (0);
-}
-*/

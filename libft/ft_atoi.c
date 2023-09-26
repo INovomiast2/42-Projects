@@ -1,48 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 14:31:35 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/09/26 14:29:36 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/09/26 21:09:47 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/09/26 21:16:55 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+int	ft_atoi(const char *str)
 {
-	size_t	i;
-
-	i = 0;
-	while (*src && i + 1 < dstsize)
-	{
-		*dst++ = *src++;
-		++i;
-	}
-	if (i < dstsize)
-	{
-		*dst = 0;
-	}
-	while (*src++)
-	{
-		++i;
-	}
-	return (i);
-}
-
-/*
-int main()
-{
-	char *src = "Hello";
-	char dst[10];
+	int	r;
+	int s;
 	int i;
 
-	i = ft_strlcpy(dst, src, 0);
-	printf("%d\n", i);
-	printf("%s\n", dst);
-	return (0);
+	r = 0;
+	s = 0;
+	i = 0;
 }
-*/

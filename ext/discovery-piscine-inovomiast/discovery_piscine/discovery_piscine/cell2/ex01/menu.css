@@ -1,0 +1,88 @@
+/* Basic Page Config */
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #121212;
+}
+
+/* Hamburger Div */
+.hamburguer {
+    height: 100vh;
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Hamburguer Links */
+.hamburguer a {
+    text-decoration: none;
+    transition: color ease 0.3s;
+}
+
+/* Hamburguer Links OnHover Change Color */
+.hamburguer a:hover {
+    color: tomato;
+}
+
+/* Input Falso: Esto es lo que permite que podamos alternar en el menu */
+.hamburguer input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+}
+
+/* Menu */
+.menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background-color: black;
+    list-style-type: none;
+    z-index: -1;
+    transition: all 2s ease;
+    transform: scaleX(0%);
+    transform-origin: -100%;
+    border-right: 2px solid white;
+}
+
+.menu a {
+    color: white;
+    display: flex;
+    font-size: 25px;
+    padding: 10px;
+}
+
+/* Aquí sucede la magía */
+.hamburguer input:checked ~ ul {
+    display: block;
+    transform: scaleX(100%);
+}
+
+/* 
+    Explicación: Este menú de hamburguesa funciona debido a que en CSS
+    existe una propiedad la cual nos permite ver si un input del tipo
+    checkbox está marcado, una vez este está marcado con el simbolo
+    ~ podemos asignar un elemento a modificar una vez cumplida dicha
+    condición.
+*/

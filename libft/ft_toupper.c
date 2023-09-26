@@ -1,48 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 14:31:35 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/09/26 14:29:36 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/09/26 14:31:48 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/09/26 14:43:45 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+int	ft_toupper(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (*src && i + 1 < dstsize)
+	if (c >= 'a' && c <= 'z' )
 	{
-		*dst++ = *src++;
-		++i;
+		return (c - 32);
 	}
-	if (i < dstsize)
-	{
-		*dst = 0;
-	}
-	while (*src++)
-	{
-		++i;
-	}
-	return (i);
+	return (c);
 }
 
-/*
-int main()
-{
-	char *src = "Hello";
-	char dst[10];
-	int i;
+// int	main(void)
+// {
+// 	int	c;
 
-	i = ft_strlcpy(dst, src, 0);
-	printf("%d\n", i);
-	printf("%s\n", dst);
-	return (0);
-}
-*/
+// 	c = 'a';
+// 	printf("Character: %c \n", c);
+// 	printf("Upper: %c", ft_toupper(c));
+// 	return (0);
+// }

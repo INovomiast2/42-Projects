@@ -1,48 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 14:31:35 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/09/26 14:29:36 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/09/26 18:49:22 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/09/26 20:19:56 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	unsigned char	*ptr;
 
-	i = 0;
-	while (*src && i + 1 < dstsize)
+	ptr = (unsigned char *)s;
+	while (n > 0)
 	{
-		*dst++ = *src++;
-		++i;
+		if (*ptr == (unsigned char)c)
+		{
+			return ((void *)ptr);
+		}
+		ptr++;
+		n--;
 	}
-	if (i < dstsize)
-	{
-		*dst = 0;
-	}
-	while (*src++)
-	{
-		++i;
-	}
-	return (i);
+	return (NULL);
 }
 
-/*
-int main()
-{
-	char *src = "Hello";
-	char dst[10];
-	int i;
+// int	main(void)
+// {
+// 	char	*str;
+// 	char	*ptr;
 
-	i = ft_strlcpy(dst, src, 0);
-	printf("%d\n", i);
-	printf("%s\n", dst);
-	return (0);
-}
-*/
+// 	str = "Hello World";
+// 	ptr = ft_memchr(str, 'W', 11);
+// 	printf("%s\n", ptr);
+// 	return (0);
+// }

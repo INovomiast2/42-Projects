@@ -1,48 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 14:31:35 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/09/26 14:29:36 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/09/26 20:38:01 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/09/26 21:07:40 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
+	size_t	n_len;
 	size_t	i;
 
-	i = 0;
-	while (*src && i + 1 < dstsize)
+	n_len = ft_strlen(needle);
+	if (n_len == 0 || haystack == needle)
 	{
-		*dst++ = *src++;
-		++i;
+		return ((char *)haystack);
 	}
-	if (i < dstsize)
+	while (*haystack != '\0' && len >= n_len)
 	{
-		*dst = 0;
+		i = 0;
+		while (haystack[i] == needle[i] && needle[i] != '\0')
+		{
+			i++;
+		}
+		if (needle[i] == '\0')
+		{
+			return ((char *)haystack);
+		}
+		haystack++;
+		len--;
 	}
-	while (*src++)
-	{
-		++i;
-	}
-	return (i);
+	return (NULL);
 }
-
-/*
-int main()
-{
-	char *src = "Hello";
-	char dst[10];
-	int i;
-
-	i = ft_strlcpy(dst, src, 0);
-	printf("%d\n", i);
-	printf("%s\n", dst);
-	return (0);
-}
-*/

@@ -1,0 +1,58 @@
+td {
+    border: 2px solid black;
+    width: 50%;
+    height: 250px;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    table-layout: fixed;
+}
+
+.td1 {
+    background-color: palegreen;
+    color: black;
+}
+
+.td2 {
+    background-color: coral;
+    color: black;
+}
+
+.td3 {
+    background-color: crimson;
+    color: black;
+    display: none;
+    transition: all 1s;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: #121212;
+    }
+    td {
+        display: flex;
+        width: 300px;
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+        border: white 2px solid;
+    }
+    table {
+        table-layout: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    th {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .td3 {
+        display: flex;
+    }
+    
+}
