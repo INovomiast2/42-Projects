@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 21:09:47 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/09/27 19:12:18 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/09/27 19:17:47 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/09/27 19:35:01 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_strdup(const char *s)
 {
-	int	r;
-	int	s;
-	int	i;
+	char	*str;
+	int		len;
 
-	r = 0;
-	s = 0;
-	i = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
-			s++;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		r = r * 10 + (str[i] - 48);
-		i++;
-	}
-	if (s % 2 == 1)
-		return (r * -1);
-	return (r);
+	len = ft_strlen(s) + 1;
+	str = malloc(len);
+	if (!str)
+		return (0);
+	ft_memcpy(str, s, len);
+	return (str);
 }

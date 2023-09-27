@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 21:09:47 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/09/27 19:12:18 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/09/27 19:40:01 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/09/27 19:48:43 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	r;
-	int	s;
-	int	i;
+	char	*str;
+	size_t	size;
 
-	r = 0;
-	s = 0;
-	i = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
-			s++;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		r = r * 10 + (str[i] - 48);
-		i++;
-	}
-	if (s % 2 == 1)
-		return (r * -1);
-	return (r);
+	size = ft_strlen(s);
+	if (size < start)
+		return (ft_strdup(""));
+	if (size - start < len)
+		len = size - start;
+	str = malloc(len + 1);
+	if (!str)
+		return (0);
+	ft_memcpy(str, s + start, len);
+	str[len] = '\0';
+	return (str);
 }
