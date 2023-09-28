@@ -45,8 +45,6 @@ import threading
 from colorama import Fore, Back, Style, init
 from lib import edoc
 
-import keyboard
-
 # Importing EDOC modules
 from lib import netpy
 
