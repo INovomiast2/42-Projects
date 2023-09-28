@@ -133,7 +133,7 @@ def edocMenu():
 		This is the function that runs once created the session and all the files.
     """
     while True:
-        custom_fig = Figlet(font='basic')
+        custom_fig = Figlet(font='slant')
         print(custom_fig.renderText('EDOC'))
         print(Fore.LIGHTBLUE_EX + "EDOC - Every Day One Course" + Fore.RESET)
         print("===========================")
