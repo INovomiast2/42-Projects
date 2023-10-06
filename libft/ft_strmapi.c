@@ -1,54 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 08:17:26 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/10/05 21:55:44 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/10/05 21:51:59 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/10/05 21:59:02 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	nlen(long int num)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
+	char	*str;
+	int		i;
 
+	str = (char *)s;
 	i = 0;
-	while (num >= 10)
+	if (!s || !f)
+		return (NULL);
+	str = (char *)malloc(ft_strlen(s) + 1);
+	if (!str)
+		return (NULL);
+	while (i < ft_strlen(s))
 	{
-		num = num / 10;
+		str[i] = f(i, s[i]);
 		i++;
 	}
-	return (i + 1);
-}
-
-char	*ft_itoa(int n)
-{
-	char		*str;
-	size_t		len;
-	long int	num2;
-
-	num2 = n;
-	if (num2 < 0)
-		num2 = num2 * -1;
-	len = nlen(num2);
-	if (n < 0)
-		len++;
-	str = (char *)malloc(len + 1);
-	if (str == 0)
-		return (NULL);
-	str[len--] = '\0';
-	if (num2 == 0)
-		str[0] = 48;
-	while (num2 > 0)
-	{
-		str[len--] = (num2 % 10) + 48;
-		num2 = num2 / 10;
-	}
-	if (n < 0)
-		str[0] = '-';
+	str[i] = '\0';
 	return (str);
 }
