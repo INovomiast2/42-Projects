@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 09:32:35 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/10/10 09:40:13 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/09/14 18:03:10 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/09/17 07:35:58 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	t_list	*new_list;
-	t_list	*nd;
+	unsigned char		*p_str1;
+	unsigned const char	*p_str2;
 
-	if (!lst)
-		return (NULL);
-	new_list = 0;
-	while (lst)
-	{
-		nd = ft_lstnew(f(lst->content));
-		if (!nd)
-		{
-			ft_lstclear(&new_list, del);
-			return (NULL);
-		}
-		ft_lstadd_back(&new_list, nd);
-		lst = lst->next;
-	}
-	return (new_list);
+	if (dst < src)
+		return (ft_memcpy(dst, src, len));
+	p_str1 = (unsigned char *)dst;
+	p_str2 = (unsigned const char *)src;
+	if (!len || dst == src)
+		return (dst);
+	while (len--)
+		p_str1[len] = p_str2[len];
+	return (dst);
 }

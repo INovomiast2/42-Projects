@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 09:32:35 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/10/10 09:40:13 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/09/26 18:22:24 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/09/26 18:24:43 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+char	*ft_strrchr(const char *s, int c)
 {
-	t_list	*new_list;
-	t_list	*nd;
+	int	len;
 
-	if (!lst)
-		return (NULL);
-	new_list = 0;
-	while (lst)
+	len = ft_strlen((char *)s);
+	while (len >= 0)
 	{
-		nd = ft_lstnew(f(lst->content));
-		if (!nd)
+		if (s[len] == (char )c)
 		{
-			ft_lstclear(&new_list, del);
-			return (NULL);
+			return ((char *)&s[len]);
 		}
-		ft_lstadd_back(&new_list, nd);
-		lst = lst->next;
+		len--;
 	}
-	return (new_list);
+	return (NULL);
 }

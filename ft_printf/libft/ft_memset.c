@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 09:32:35 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/10/10 09:40:13 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/09/13 11:50:13 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/09/17 07:15:40 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+void	*ft_memset(void *b, int c, size_t len)
 {
-	t_list	*new_list;
-	t_list	*nd;
+	size_t			i;
+	unsigned char	*str;
 
-	if (!lst)
-		return (NULL);
-	new_list = 0;
-	while (lst)
+	i = 0;
+	str = (unsigned char *)b;
+	while (i < len)
 	{
-		nd = ft_lstnew(f(lst->content));
-		if (!nd)
-		{
-			ft_lstclear(&new_list, del);
-			return (NULL);
-		}
-		ft_lstadd_back(&new_list, nd);
-		lst = lst->next;
+		str[i++] = (unsigned char)c;
 	}
-	return (new_list);
+	return (b);
 }
+
+/*
+int main(void)
+{
+ 	char str[50] = "Hello world";
+ 	ft_memset(str, 'a', 6);
+ 	printf("%s", str);
+ 	return (0);
+}
+*/

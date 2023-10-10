@@ -1,35 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 09:32:35 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/10/10 09:40:13 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/09/26 18:49:22 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/09/26 20:19:56 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	t_list	*new_list;
-	t_list	*nd;
+	unsigned char	*ptr;
 
-	if (!lst)
-		return (NULL);
-	new_list = 0;
-	while (lst)
+	ptr = (unsigned char *)s;
+	while (n > 0)
 	{
-		nd = ft_lstnew(f(lst->content));
-		if (!nd)
+		if (*ptr == (unsigned char)c)
 		{
-			ft_lstclear(&new_list, del);
-			return (NULL);
+			return ((void *)ptr);
 		}
-		ft_lstadd_back(&new_list, nd);
-		lst = lst->next;
+		ptr++;
+		n--;
 	}
-	return (new_list);
+	return (NULL);
 }
+
+// int	main(void)
+// {
+// 	char	*str;
+// 	char	*ptr;
+
+// 	str = "Hello World";
+// 	ptr = ft_memchr(str, 'W', 11);
+// 	printf("%s\n", ptr);
+// 	return (0);
+// }

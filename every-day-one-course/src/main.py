@@ -45,8 +45,6 @@ import threading
 from colorama import Fore, Back, Style, init
 from lib import edoc
 
-import keyboard
-
 # Importing EDOC modules
 from lib import netpy
 
@@ -54,7 +52,7 @@ def main():
 	# Clearing the screen
 	os.system("cls" if os.name == "nt" else "clear")
 	# Checkimg if the user has internet connection.
-	if netpy.check.connection() == True:
+	if netpy.check.connection() == False:
 		print(Fore.LIGHTYELLOW_EX + "[EDOC] " + Fore.RESET + "Internet connection: " + Fore.LIGHTGREEN_EX + "OK" + Style.RESET_ALL)
 		time.sleep(1)
 		print("========================================")
@@ -79,7 +77,7 @@ def main():
 
 	else:
 		print(Fore.LIGHTYELLOW_EX + "[EDOC] " + Fore.RESET + "Internet connection: " + Fore.RED + "KO" + Style.RESET_ALL)
-		sys.exit(1)
+        #sys.exit(1)
 
 
 '''

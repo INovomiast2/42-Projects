@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 09:32:35 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/10/10 09:40:13 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/09/26 14:42:55 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/09/26 15:07:38 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+int	ft_tolower(int c)
 {
-	t_list	*new_list;
-	t_list	*nd;
-
-	if (!lst)
-		return (NULL);
-	new_list = 0;
-	while (lst)
+	if (c >= 'A' && c <= 'Z')
 	{
-		nd = ft_lstnew(f(lst->content));
-		if (!nd)
-		{
-			ft_lstclear(&new_list, del);
-			return (NULL);
-		}
-		ft_lstadd_back(&new_list, nd);
-		lst = lst->next;
+		return (c + 32);
 	}
-	return (new_list);
+	return (c);
 }
+
+/* int	main(void)
+{
+ 	int	c;
+
+ 	c = 'A';
+ 	printf("Character: %c \n", c);
+ 	printf("Lower: %c", ft_tolower(c));
+ 	return (0);
+} */

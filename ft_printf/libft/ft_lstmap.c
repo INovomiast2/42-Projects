@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 09:32:35 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/10/10 09:40:13 by ivnovomi         ###   ########.fr       */
+/*   Created: 2023/10/05 23:55:38 by ivnovomi          #+#    #+#             */
+/*   Updated: 2023/10/06 00:40:42 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,23 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_list;
-	t_list	*nd;
+	t_list	*new_l;
+	t_list	*e;
 
 	if (!lst)
 		return (NULL);
-	new_list = 0;
+	new_l = NULL;
 	while (lst)
 	{
-		nd = ft_lstnew(f(lst->content));
-		if (!nd)
+		e = ft_lstnew(f(lst->content));
+		if (!e)
 		{
-			ft_lstclear(&new_list, del);
-			return (NULL);
+			del(new_l);
+			ft_lstclear(&new_l, del);
+			return (0);
 		}
-		ft_lstadd_back(&new_list, nd);
+		ft_lstadd_back(&new_l, e);
 		lst = lst->next;
 	}
-	return (new_list);
+	return (new_l);
 }
