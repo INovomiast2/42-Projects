@@ -6,7 +6,7 @@
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 14:11:57 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/11/30 18:21:02 by ivnovomi         ###   ########.fr       */
+/*   Updated: 2023/12/01 10:58:28 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,11 @@
 
 int	ft_print_char(char c)
 {
-	write(1, &c, 1);
+	int	writen_byte;
+
+	writen_byte = write(1, &c, 1);
+	if (writen_byte == -1)
+		return (-1);
 	return (1);
 }
 
