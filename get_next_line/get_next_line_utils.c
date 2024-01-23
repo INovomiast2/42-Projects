@@ -6,7 +6,7 @@
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 11:17:16 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/12/04 12:00:03 by ivnovomi         ###   ########.fr       */
+/*   Updated: 2023/12/08 14:18:25 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	*ft_bzero(void *s, size_t n)
 		b[i] = 0;
 		i++;
 	}
+	return (s);
 }
 
 void	*ft_calloc(size_t nmemb, size_t size)
@@ -84,7 +85,7 @@ char	*ft_strchr(const char *str, int c)
 			return ((char *)str);
 		str++;
 	}
-	if (*str == (char *)c)
+	if (*str == (char)c)
 		return ((char *)str);
 	return (NULL);
 }
