@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivnovomi <ivnovomi@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 11:17:16 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/12/08 14:18:25 by ivnovomi         ###   ########.fr       */
+/*   Created: 2024/02/07 18:36:27 by ivnovomi          #+#    #+#             */
+/*   Updated: 2024/02/07 18:37:41 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

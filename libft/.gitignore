@@ -1,3 +1,7 @@
-/.vscode/
-*.a
+.DS_Store
 *.out
+.gitignore
+makeIt.py
+/build/*
+/.vscode/*
+*.txt

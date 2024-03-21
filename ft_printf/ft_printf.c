@@ -6,7 +6,7 @@
 /*   By: ivnovomi <ivnovomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 14:33:27 by ivnovomi          #+#    #+#             */
-/*   Updated: 2023/11/30 18:22:07 by ivnovomi         ###   ########.fr       */
+/*   Updated: 2023/12/08 16:42:44 by ivnovomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int	ft_printf(const char *format, ...)
 
 	i = 0;
 	j = 0;
+	if (write(1, "", 0) == -1)
+		return (-1);
 	va_start(args, format);
 	while (format[i])
 	{

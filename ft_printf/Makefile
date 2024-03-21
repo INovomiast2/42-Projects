@@ -11,11 +11,10 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
 	@echo "\033[0;32m$(NAME) created successfully!\033[0m"
 
-$(OBJS): $(FILES)
-	gcc $(FLAGS) -c $(FILES)
+$(OBJS): %.o: %.c
+	gcc $(FLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
