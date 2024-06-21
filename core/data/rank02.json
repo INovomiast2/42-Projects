@@ -1,0 +1,388 @@
+{
+	"rank": 2,
+	"levels": ["Level1", "Level2", "Level3", "Level4"],
+	"exercises": {
+		"level1": [
+			{
+				"name": "first_word",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level1/firstword.subject.txt",
+				"filesneeded": 1,
+				"files": ["first_word.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "fizzbuzz",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level1/fizzbuzz.subject.txt",
+				"filesneeded": 1,
+				"files": ["fizzbuzz.c"],
+				"needsmain": true,
+				"xp": 25
+			},
+			{
+				"name": "ft_putstr",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level1/ftputstr.subject.txt",
+				"filesneeded": 1,
+				"files": ["ft_putstr.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "ft_strcpy",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level1/ftstrcpy.subject.txt",
+				"filesneeded": 1,
+				"files": ["ft_strcpy.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "ft_strlen",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level1/ftstrlen.subject.txt",
+				"filesneeded": 1,
+				"files": ["ft_strlen.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "ft_swap",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level1/ftswap.subject.txt",
+				"filesneeded": 1,
+				"files": ["ft_swap.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "repeat_alpha",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level1/repeatalpha.subject.txt",
+				"filesneeded": 1,
+				"files": ["repeat_alpha.c"],
+				"needsmain": true,
+				"xp": 25
+			},
+			{
+				"name": "rev_print",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level1/revprint.subject.txt",
+				"filesneeded": 1,
+				"files": ["rev_print.c"],
+				"needsmain": true,
+				"xp": 25
+			},
+			{
+				"name": "rot_13",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level1/rot13.subject.txt",
+				"filesneeded": 1,
+				"files": ["rot_13.c"],
+				"needsmain": true,
+				"xp": 25
+			},
+			{
+				"name": "rotone",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level1/rotone.subject.txt",
+				"filesneeded": 1,
+				"files": ["rotone.c"],
+				"needsmain": true,
+				"xp": 25
+			},
+			{
+				"name": "search_and_replace",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level1/searchandreplace.subject.txt",
+				"filesneeded": 1,
+				"files": ["search_and_replace.c"],
+				"needsmain": true,
+				"xp": 25
+			},
+			{
+				"name": "ulstr",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level1/ulstr.subject.txt",
+				"filesneeded": 1,
+				"files": ["ulstr.c"],
+				"needsmain": true,
+				"xp": 25
+			}
+		],
+		"level2": [
+			{
+				"name": "alpha_mirror",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/alphamirror.subject.txt",
+				"filesneeded": 1,
+				"files": ["alpha_mirror.c"],
+				"needsmain": true,
+				"xp": 25
+			},
+			{
+				"name": "camel_to_snake",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/cameltosnake.subject.txt",
+				"filesneeded": 1,
+				"files": ["camel_to_snake.c"],
+				"needsmain": true,
+				"xp": 25
+			},
+			{
+				"name": "do_op",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/doop.subject.txt",
+				"filesneeded": 1,
+				"files": ["do_op.c"],
+				"needsmain": true,
+				"xp": 25
+			},
+			{
+				"name": "ft_atoi",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/ftatoi.subject.txt",
+				"filesneeded": 1,
+				"files": ["ft_atoi.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "ft_strcmp",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/ftstrcmp.subject.txt",
+				"filesneeded": 1,
+				"files": ["ft_strcmp.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "ft_strdup",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/ftstrdup.subject.txt",
+				"filesneeded": 1,
+				"files": ["ft_strdup.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "ft_strncspn",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/ftstrncspn.subject.txt",
+				"filesneeded": 1,
+				"files": ["ft_strncspn.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "ft_strpbrk",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/ftstrpbrk.subject.txt",
+				"filesneeded": 1,
+				"files": ["ft_strpbrk.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "ft_strrev",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/ftstrrev.subject.txt",
+				"filesneeded": 1,
+				"files": ["ft_strrev.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "ft_strspn",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/ftstrspn.subject.txt",
+				"filesneeded": 1,
+				"files": ["ft_strspn.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "inter",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/inter.subject.txt",
+				"filesneeded": 1,
+				"files": ["inter.c"],
+				"needsmain": true,
+				"xp": 25
+			},
+			{
+				"name": "is_power_of_2",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/ispowerof2.subject.txt",
+				"filesneeded": 1,
+				"files": ["is_power_of_2.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "last_word",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/lastword.subject.txt",
+				"filesneeded": 1,
+				"files": ["last_word.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "max",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/max.subject.txt",
+				"filesneeded": 1,
+				"files": ["max.c"],
+				"needsmain": true,
+				"xp": 25
+			},
+			{
+				"name": "print_bits",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/printbits.subject.txt",
+				"filesneeded": 1,
+				"files": ["print_bits.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "reverse_bits",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/reversebits.subject.txt",
+				"filesneeded": 1,
+				"files": ["reverse_bits.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "snake_to_camel",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/snaketocamel.subject.txt",
+				"filesneeded": 1,
+				"files": ["snake_to_camel.c"],
+				"needsmain": true,
+				"xp": 25
+			},
+			{
+				"name": "swap_bits",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/swapbits.subject.txt",
+				"filesneeded": 1,
+				"files": ["swap_bits.c"],
+				"needsmain": false,
+				"xp": 25
+			},
+			{
+				"name": "union",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/union.subject.txt",
+				"filesneeded": 1,
+				"files": ["union.c"],
+				"needsmain": true,
+				"xp": 25
+			},
+			{
+				"name": "wdmatch",
+				"subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level2/wdmatch.subject.txt",
+				"filesneeded": 1,
+				"files": ["wdmatch.c"],
+				"needsmain": true,
+				"xp": 25
+			}
+		],
+		"level3": [
+			{
+                "name": "add_prime_sum",
+                "subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level3/addprimesum.subject.txt",
+                "filesneeded": 1,
+                "files": ["add_prime_sum.c"],
+                "needsmain": true,
+                "xp": 25
+            },
+            {
+                "name": "epur_str",
+                "subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level3/epurstr.subject.txt",
+                "filesneeded": 1,
+                "files": ["epur_str.c"],
+                "needsmain": true,
+                "xp": 25
+            },
+            {
+                "name": "expand_str",
+                "subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level3/expandstr.subject.txt",
+                "filesneeded": 1,
+                "files": ["expand_str.c"],
+                "needsmain": true,
+                "xp": 25
+            },
+            {
+                "name": "ft_atoi_base",
+                "subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level3/ftatoibase.subject.txt",
+                "filesneeded": 1,
+                "files": ["ft_atoi_base.c"],
+                "needsmain": false,
+                "xp": 25
+            },
+            {
+                "name": "ft_list_size",
+                "subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level3/ftlistsize.subject.txt",
+                "filesneeded": 2,
+                "files": ["ft_list_size.c", "ft_list.h"],
+                "needsmain": false,
+                "xp": 25
+            },
+            {
+                "name": "ft_range",
+                "subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level3/ftrange.subject.txt",
+                "filesneeded": 1,
+                "files": ["ft_range.c"],
+                "needsmain": false,
+                "xp": 25
+            },
+            {
+                "name": "ft_rrange",
+                "subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level3/ftrrange.subject.txt",
+                "filesneeded": 1,
+                "files": ["ft_rrange.c"],
+                "needsmain": false,
+                "xp": 25
+            },
+            {
+                "name": "hidenp",
+                "subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level3/hidenp.subject.txt",
+                "filesneeded": 1,
+                "files": ["hidenp.c"],
+                "needsmain": true,
+                "xp": 25
+            },
+            {
+                "name": "lcm",
+                "subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level3/lcm.subject.txt",
+                "filesneeded": 1,
+                "files": ["lcm.c"],
+                "needsmain": true,
+                "xp": 25
+            },
+            {
+                "name": "paramsum",
+                "subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level3/paramsum.subject.txt",
+                "filesneeded": 1,
+                "files": ["paramsum.c"],
+                "needsmain": true,
+                "xp": 25
+            },
+            {
+                "name": "pgcd",
+                "subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level3/pgcd.subject.txt",
+                "filesneeded": 1,
+                "files": ["pgcd.c"],
+                "needsmain": true,
+                "xp": 25
+            },
+            {
+                "name": "print_hex",
+                "subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level3/printhex.subject.txt",
+                "filesneeded": 1,
+                "files": ["print_hex.c"],
+                "needsmain": false,
+                "xp": 25
+            },
+            {
+                "name": "rstr_capitalizer",
+                "subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level3/rstrcapitalizer.subject.txt",
+                "filesneeded": 1,
+                "files": ["rstr_capitalizer.c"],
+                "needsmain": true,
+                "xp": 25
+            },
+            {
+                "name": "str_capitalizer",
+                "subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level3/strcapitalizer.subject.txt",
+                "filesneeded": 1,
+                "files": ["str_capitalizer.c"],
+                "needsmain": true,
+                "xp": 25
+            },
+            {
+                "name": "tab_mult",
+                "subject": "https://raw.githubusercontent.com/INovomiast2/examsubjects/main/rank02/level3/tabmult.subject.txt",
+                "filesneeded": 1,
+                "files": ["tab_mult.c"],
+                "needsmain": true,
+                "xp": 25
+            }
+		]
+	}
+}

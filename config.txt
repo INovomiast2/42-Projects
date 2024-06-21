@@ -1,0 +1,5 @@
+exam_rank: 02
+username: ivnovomi
+timestamp: 2024-06-20 12:53:40.658080
+currentLevel: 1
+exercise: rev_print
